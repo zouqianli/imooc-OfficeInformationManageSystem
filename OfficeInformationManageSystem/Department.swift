@@ -12,16 +12,19 @@
 import Foundation
 
 class Department {
-    var identify:Int = 0;
-    var name:String = "";
-    var staff = [Staff]();
+    var identify:Int = 0; // 部门编号
+    var name:String = ""; // 部门名称
+    var staff = [Staff](); // 该部门所有员工信息
     
+    /// 获取该部门员工数量
+    ///
+    /// - Returns: 返回该部门所有员工个数
     func getAllMembersCount() -> Int {
-        return staff.count;
+        return self.staff.count;
     }
     
-//    init(identify:Int,name:String) {
-//        self.identify = identify;
-//        self.name = name;
-//    }
+    init(identify:Int,name:String) {
+        self.identify = identify;
+        self.name = name;
+    }
 }
